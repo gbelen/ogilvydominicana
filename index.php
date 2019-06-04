@@ -1,38 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogilvy | Dominicana</title>
+<?php get_header(); ?>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-
-    <meta name="msapplication-TileColor" content="#e84148">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-
-    <meta name="theme-color" content="#e84148">
-    
-    <meta name="description" content="Ogilvy es una red creativa integrada ganadora de premios que hace que las marcas importen, especializándose en la creación de experiencias, el diseño y las comunicaciones.">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.min.css">
-    <link rel="stylesheet" href="assets/ogilvy.css">
-</head>
-<body class="bg-0">
     <nav class="navbar">
         <a id="logo-header1" class="navbar-brand hidden" href="."></a>
         <div class="navbar-toggler ml-auto border-0 d-flex justify-content-center" data-toggle="collapse" data-target="" aria-controls=""
@@ -43,7 +10,7 @@
             <span></span>
         </div>
     </nav>
-    
+
     <div id="sidenav-menu" class="">
         <div id="bg-header" class="text-left d-md-none">
             <a id="logo-header2" class="navbar-brand" href="."></a>
@@ -106,14 +73,14 @@
                 c0,5.9,4.8,10.1,12.5,10.1c11,0,21.7-8.8,30.7-29.8L562.5,83.2z" />
                 </g>
             </svg>
-            <img id="img3" class="img-fluid position-absolute animation-1" src="assets/img/inicio/ogilvy-3.png" alt="Ogilvy-Chile-3">
-            <img id="img2" class="img-fluid position-absolute animation-1" src="assets/img/inicio/ogilvy-2.png" alt="Ogilvy-Chile-2">
-            <img id="img1" class="img-fluid position-absolute animation-2" src="assets/img/inicio/ogilvy-1.png" alt="Ogilvy-Chile-1">
-            <img id="img4" class="img-fluid position-absolute animation-1" src="assets/img/inicio/ogilvy-4.png" alt="Ogilvy-Chile-4">
-            <img id="img5" class="img-fluid position-absolute animation-2" src="assets/img/inicio/ogilvy-5.png" alt="Ogilvy-Chile-5">
-            <img id="img6" class="img-fluid position-absolute animation-2" src="assets/img/inicio/ogilvy-6.png" alt="Ogilvy-Chile-6">
-            <img id="img7" class="img-fluid position-absolute animation-1" src="assets/img/inicio/ogilvy-7.png" alt="Ogilvy-Chile-7">
-            <img id="img8" class="img-fluid position-absolute animation-2" src="assets/img/inicio/ogilvy-8.png" alt="Ogilvy-Chile-8">
+            <img id="img3" class="img-fluid position-absolute animation-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-3.png" alt="Ogilvy-Chile-3">
+            <img id="img2" class="img-fluid position-absolute animation-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-2.png" alt="Ogilvy-Chile-2">
+            <img id="img1" class="img-fluid position-absolute animation-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-1.png" alt="Ogilvy-Chile-1">
+            <img id="img4" class="img-fluid position-absolute animation-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-4.png" alt="Ogilvy-Chile-4">
+            <img id="img5" class="img-fluid position-absolute animation-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-5.png" alt="Ogilvy-Chile-5">
+            <img id="img6" class="img-fluid position-absolute animation-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-6.png" alt="Ogilvy-Chile-6">
+            <img id="img7" class="img-fluid position-absolute animation-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-7.png" alt="Ogilvy-Chile-7">
+            <img id="img8" class="img-fluid position-absolute animation-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-8.png" alt="Ogilvy-Chile-8">
         </div>
     </div>
     <!--
@@ -128,15 +95,15 @@
             <span></span>
         </a>
         <div id="section-modal" class="section text-center" data-anchor="detalles-trabajo">
-            <div class="trabajo1 d-none" style="background-image: url(assets/img/trabajos/trabajo-1.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(assets/img/trabajos/trabajo-2.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(assets/img/trabajos/trabajo-3.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(assets/img/trabajos/trabajo-4.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(assets/img/trabajos/trabajo-5.png)"></div>
+            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png)"></div>
+            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png)"></div>
+            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png)"></div>
+            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png)"></div>
+            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png)"></div>
             <div class="trabajo2 d-none">
                 <iframe data-src="https://www.youtube.com/embed/gC1RVzQNxUc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <div class="trabajo3 d-none" style="background-image: url(assets/img/trabajos/velo-prueba.png)"></div>
+            <div class="trabajo3 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/velo-prueba.png)"></div>
             <div class="trabajo4 d-none">
                 <iframe data-src="https://www.youtube.com/embed/gC1RVzQNxUc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
@@ -146,7 +113,7 @@
             <div class="trabajo4 d-none">
                 <iframe data-src="https://www.youtube.com/embed/XVZGrKJHcXI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <div class="trabajo5 d-none" style="background-image: url(assets/img/trabajos/trabajo-5.png)"></div>
+            <div class="trabajo5 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png)"></div>
         </div>
     </div>
     <!--
@@ -163,7 +130,7 @@
                 <div id="container-trabajos" class="mt-auto h-auto w-100">
                     <div class="d-flex">
                         <a class="trabajo" onclick="clickTrabajo('.trabajo1');" href="#/">
-                            <img class="" src="assets/img/trabajos/trabajo-1.png" alt="Trabajo">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -175,7 +142,7 @@
                             </div>
                         </a>
                         <a class="trabajo" onclick="clickTrabajo('.trabajo2');" href="#/">
-                            <img class="" src="assets/img/trabajos/trabajo-2.png" alt="Trabajo">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Unicef
@@ -187,7 +154,7 @@
                             </div>
                         </a>
                         <a class="trabajo" onclick="clickTrabajo('.trabajo3');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-3.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Ropa
@@ -199,7 +166,7 @@
                             </div>
                         </a>
                         <a class="trabajo movil" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-4.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -211,7 +178,7 @@
                             </div>
                         </a>
                         <a class="trabajo movil" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-5.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -225,7 +192,7 @@
                     </div>
                     <div class="d-flex">
                         <a class="trabajo" onclick="clickTrabajo('.trabajo1');" href="#/">
-                            <img class="" src="assets/img/trabajos/trabajo-1.png" alt="Trabajo">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -237,7 +204,7 @@
                             </div>
                         </a>
                         <a class="trabajo" onclick="clickTrabajo('.trabajo2');" href="#/">
-                            <img class="" src="assets/img/trabajos/trabajo-2.png" alt="Trabajo">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Unicef
@@ -249,7 +216,7 @@
                             </div>
                         </a>
                         <a class="trabajo" onclick="clickTrabajo('.trabajo3');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-3.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Ropa
@@ -261,7 +228,7 @@
                             </div>
                         </a>
                         <a class="trabajo movil" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-4.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -273,7 +240,7 @@
                             </div>
                         </a>
                         <a class="trabajo movil" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-5.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -287,7 +254,7 @@
                     </div>
                     <div id="t-movil" class="d-none mas">
                         <a class="trabajo" onclick="clickTrabajo('.trabajo1');" href="#/">
-                            <img class="" src="assets/img/trabajos/trabajo-1.png" alt="Trabajo">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -299,7 +266,7 @@
                             </div>
                         </a>
                         <a class="trabajo" onclick="clickTrabajo('.trabajo2');" href="#/">
-                            <img class="" src="assets/img/trabajos/trabajo-2.png" alt="Trabajo">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Unicef
@@ -311,7 +278,7 @@
                             </div>
                         </a>
                         <a class="trabajo" onclick="clickTrabajo('.trabajo3');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-3.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Ropa
@@ -323,7 +290,7 @@
                             </div>
                         </a>
                         <a class="trabajo movil" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-4.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -335,7 +302,7 @@
                             </div>
                         </a>
                         <a class="trabajo movil" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-5.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Dulce
@@ -349,7 +316,7 @@
                     </div>
                     <div class="d-none mas">
                         <a class="trabajo" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-6.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-6.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Unicef
@@ -361,7 +328,7 @@
                             </div>
                         </a>
                         <a class="trabajo" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="assets/img/trabajos/trabajo-7.png" alt="Trabajo">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-7.png" alt="Trabajo">
                             <div class="detalles">
                                 <p class="t-titulo">
                                     Unicef
@@ -437,7 +404,7 @@
                 <div class="w-60 mt-3 mt-md-0 h-100">
                     <div class="slide">
                         <div class="pl-somos text-justify">
-                            <img class="img-fluid mx-auto d-flex" src="assets/img/cannes-lions.png" alt="Cannes Lions">
+                            <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
                             <h2>
                                 “La agencia más efectiva en Cannes Lions”
                             </h2>
@@ -452,7 +419,7 @@
                     </div>
                     <div class="slide">
                         <div class="pl-somos text-justify">
-                            <img class="img-fluid mx-auto d-flex" src="assets/img/cannes-lions.png" alt="Cannes Lions">
+                            <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
                             <h2>
                                 <i>“La agencia más efectiva en Cannes Lions”</i>
                             </h2>
@@ -526,14 +493,5 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/vendors/scrolloverflow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.min.js"></script>
-    <script src="assets/VIEJO.js"></script>
-    </html>
-</body>
+
+<?php get_footer(); ?>
