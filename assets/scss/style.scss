@@ -1,0 +1,117 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+//import Fonts
+
+
+
+
+//---------------
+
+
+
+
+//MIXINS
+@mixin BorderRadius($radius){
+	-webkit-border-radius: $radius !important;
+	-moz-border-radius: $radius !important;
+	-ms-border-radius: $radius !important;
+	-o-border-radius: $radius !important;
+	border-radius: $radius !important;
+}
+
+
+@mixin TextShadow($shadow){
+	-webkit-text-shadow: $shadow !important;
+	-moz-text-shadow: $shadow !important;
+	-ms-text-shadow: $shadow !important;
+	-o-text-shadow: $shadow !important;
+	text-shadow: $shadow !important;
+}
+
+@mixin Transition($trans){
+	-webkit-transition: $trans !important;
+		-moz-transition: $trans !important;
+		-ms-transition: $trans !important;
+		-o-transition: $trans !important;
+		transition: $trans !important;		
+}
+
+
+//VARS
+$kaki: 	#f1f0db;
+$yellow: #eee100;
+$orange: #f7370a;
+$green: #80c31c;
+$pink: #d60556;
+$darkgreen: #399c80;
+$blue: #19c3dd;
+
+
+$grid-gutter-width: 0px !important;
+
+body{
+	color: #1a1a1a;
+}
+
+
+@include media-breakpoint-down(xl) {
+
+	.section_countdown{
+		background: $kaki;
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+
+} // End MediaQuery XL
+
+
+
+
+
+
+
+
+
+
+// ***************------------------**************
+// *********----------MediaQuery---------*********
+// ***************------------------**************
+
+
+@include media-breakpoint-down(lg) {
+	//some scss code
+
+	
+
+}
+
+
+@include media-breakpoint-down(md) {
+	//some scss code
+
+	
+
+
+
+}
+
+
+
+@include media-breakpoint-down(sm) {
+	//some scss code
+
+	
+	
+}
+
+
+@include media-breakpoint-down(xs) {
+	//some scss code
+	
+
+
+	
+	
+}

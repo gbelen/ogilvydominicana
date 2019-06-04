@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Jesús Alberto AV -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogilvy | Chile</title>
+    <title>Ogilvy | Dominicana</title>
+
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -23,7 +23,7 @@
 
     <meta name="msapplication-TileColor" content="#e84148">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    
+
     <meta name="theme-color" content="#e84148">
     
     <meta name="description" content="Ogilvy es una red creativa integrada ganadora de premios que hace que las marcas importen, especializándose en la creación de experiencias, el diseño y las comunicaciones.">
@@ -43,6 +43,7 @@
             <span></span>
         </div>
     </nav>
+    
     <div id="sidenav-menu" class="">
         <div id="bg-header" class="text-left d-md-none">
             <a id="logo-header2" class="navbar-brand" href="."></a>

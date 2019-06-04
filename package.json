@@ -1,0 +1,38 @@
+{
+  "name": "ogilvy2019",
+  "version": "1.0.0",
+  "description": "Wordpress theme development from HTML template created by Ogilvy Chile developer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbelen/ogilvydominicana.git"
+  },
+  "keywords": [
+    "Ogilvy Dominicana",
+    "Genaro Belen",
+    "Wordpress",
+    "República Dominicana"
+  ],
+  "author": "Genaro Belen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbelen/ogilvydominicana/issues"
+  },
+  "homepage": "https://github.com/gbelen/ogilvydominicana#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "fullpage.js": "^3.0.5",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
