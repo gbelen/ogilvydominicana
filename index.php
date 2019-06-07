@@ -1,54 +1,8 @@
 <?php get_header(); ?>
 
-    <nav class="navbar">
-        <a id="logo-header1" class="navbar-brand hidden" href="."></a>
-        <div class="navbar-toggler ml-auto border-0 d-flex justify-content-center" data-toggle="collapse" data-target="" aria-controls=""
-            aria-expanded="false" aria-label="menu">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <div id="sidenav-menu" class="">
-        <div id="bg-header" class="text-left d-md-none">
-            <a id="logo-header2" class="navbar-brand" href="."></a>
-        </div>
-        <ul class="list-unstyled">
-            <li class="active d-none">
-                <a href="#inicio" class="p-0">Inicio</a>
-            </li>
-            <li>
-                <a href="#trabajos" class="p-0">Trabajos</a>
-            </li>
-            <li>
-                <a href="#servicios" class="p-0">Servicios</a>
-            </li>
-            <li>
-                <a href="#somos" class="p-0">Somos</a>
-            </li>
-            <li>
-                <a href="#contacto" class="p-0">Contacto</a>
-            </li>
-            <div id="info-menu" class="mt-3">
-                <p class="py-4 mb-0">
-                    Orinoco 90 - Of. 601.
-                    <br>Las Condes.
-                    <br>Santiago de Chile.
-                    <br><a href="tel:+58227268500">2 272 68 500</a>
-                </p>
-            </div>
-            <div id="redes" class="d-flex justify-content-center">
-                <a id="facebook" href="https://www.facebook.com/ogilvy" target="_blank"></a>
-                <a id="instagram" class="mx-3 mx-md-2" href="http://www.instagram.com/ogilvymather" target="_blank"></a>
-                <a id="vimeo" href="https://vimeo.com/ogilvydigital" target="_blank"></a>
-            </div>
-        </ul>
-    </div>
-
-    
-    <div id="content-fullpage">
+<div id="content-fullpage">
+        
+    <!-- HOME PAGE -->
     <div class="section" id="section-inicio" data-anchor="inicio">
         <div id="content-inicio" class="content-section position-relative m-auto w-100 h-100 p-0 d-flex justify-content-center align-items-center">
             <svg  id="logo-svg" class="position-absolute h-auto" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -83,415 +37,363 @@
             <img id="img8" class="img-fluid position-absolute animation-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/inicio/ogilvy-8.png" alt="Ogilvy-Chile-8">
         </div>
     </div>
-    <!--
-                     _        _ 
-      _ __   ___  __| | __ _ | |
-     | '  \ / _ \/ _` |/ _` || |
-     |_|_|_|\___/\__,_|\__,_||_|
-    -->
+
+    <!-- DETALLE TRABAJO -->
     <div id="modal" class="h-100 w-100 fade">
         <a id="btn-close" href="#/">
             <span></span>
             <span></span>
         </a>
         <div id="section-modal" class="section text-center" data-anchor="detalles-trabajo">
-            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png)"></div>
-            <div class="trabajo1 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png)"></div>
-            <div class="trabajo2 d-none">
-                <iframe data-src="https://www.youtube.com/embed/gC1RVzQNxUc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="trabajo3 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/velo-prueba.png)"></div>
-            <div class="trabajo4 d-none">
-                <iframe data-src="https://www.youtube.com/embed/gC1RVzQNxUc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="trabajo4 d-none">
-                <iframe data-src="https://www.youtube.com/embed/dqP423ryC2k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="trabajo4 d-none">
-                <iframe data-src="https://www.youtube.com/embed/XVZGrKJHcXI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="trabajo5 d-none" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png)"></div>
+
+            <?php
+                $query  = array('post_type'=>'page', 'post_parent'=>10, 'post_status'=>'publish');
+                $loop   = new WP_Query($query);
+
+                $n=-1;
+                while ( $loop->have_posts() ) : $loop->the_post();
+                $n++;
+            ?>
+                <div class="trabajo<?php echo $n; ?> d-none">
+                    <div class="container">
+                        <h1><?php the_title(); ?></h1>
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+
+        </div>
+    </div><!--/ #modal -->
+
+
+    <!-- TRABAJOS -->
+    <div class="section" id="section-trabajos" data-anchor="trabajos">
+        <div class="content-section text-center row h-100 align-bottom">
+            <h1 class="titulo mb-0 h-auto mt-auto w-100">Trabajos</h1>
+            <div id="container-trabajos" class="mt-auto h-auto w-100">
+                
+                <div class="d-flex">
+                    <?php
+                        $i=-1;
+                        while ( $loop->have_posts() ) : $loop->the_post();
+                        $i++;
+                        
+                        echo $i%5 == 0 ? '</div><div class="d-flex">' : '';
+                    ?> 
+                        <a class="trabajo" onclick="clickTrabajo('.trabajo<?php echo $i; ?>');" href="#/">
+                            <?php the_post_thumbnail('thumb-cuadrada', array('class'=>'img-fluid', 'alt'=>get_the_title(), 'title'=>get_the_title() )); ?>
+                            <div class="detalles">
+                                <p class="t-titulo">
+                                    <?php the_title(); ?>
+                                </p>
+                                <span class="t-linea"></span>
+                                <p class="t-descripcion">
+                                    <?php the_excerpt(); ?>
+                                </p>
+                            </div>
+                        </a>
+                    <?php endwhile; wp_reset_postdata(); //endwhile ?>
+                </div>
+
+            </div><!--/#container-trabajos -->
         </div>
     </div>
-    <!--
-      _               _            _          
-     | |_  _ _  __ _ | |__  __ _  (_) ___  ___
-     |  _|| '_|/ _` || '_ \/ _` | | |/ _ \(_-<
-      \__||_|  \__,_||_.__/\__,_|_/ |\___//__/
-                                |__/              
-    -->
-        <div class="section" id="section-trabajos" data-anchor="trabajos">
-            <!-- <div id="bg-2" class="bg-gradient"></div> -->
-            <div class="content-section text-center row h-100 align-bottom">
-                <h1 class="titulo mb-0 h-auto mt-auto w-100">Trabajos</h1>
-                <div id="container-trabajos" class="mt-auto h-auto w-100">
-                    <div class="d-flex">
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo1');" href="#/">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+
+    <!-- CLIENTES -->
+    <div class="section text-center h-100" id="section-clientes" data-anchor="clientes">
+        <div class="content-section h-100">
+            
+            <div class="slide">
+
+                <div data-anchor="clientes">
+                    <h1 class="titulo">Clientes</h1>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/amex.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo2');" href="#/">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Unicef
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Marciano
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/bancamerica.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo3');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Ropa
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Pantuflé
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/banfondesa.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo movil" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/bebemundo.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo movil" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/casacuesta.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                    </div>
-                    <div class="d-flex">
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo1');" href="#/">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/casafacci.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo2');" href="#/">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Unicef
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Marciano
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/catrentalstore.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo3');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Ropa
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Pantuflé
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/ccn.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo movil" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/chevrolet.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo movil" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/cocacola.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                    </div>
-                    <div id="t-movil" class="d-none mas">
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo1');" href="#/">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/corona.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo2');" href="#/">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Unicef
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Marciano
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/dino.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo3');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Ropa
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Pantuflé
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/guarina.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo movil" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imaref.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo movil" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Dulce
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Algodón
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imca.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                    </div>
-                    <div class="d-none mas">
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo4');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-6.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Unicef
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Marciano
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imcacat.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo5');" href="#/">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-7.png" alt="Trabajo">
-                            <div class="detalles">
-                                <p class="t-titulo">
-                                    Unicef
-                                </p>
-                                <span class="t-linea"></span>
-                                <p class="t-descripcion">
-                                    Marciano
-                                </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/johndeere.png" alt="" class="img-fluid">
                             </div>
-                        </a>
-                        <a class="trabajo inactivo" href="#/">
-                        </a>
-                        <a class="trabajo inactivo movil" href="#/">
-                        </a>
-                        <a class="trabajo inactivo movil" href="#/">
-                        </a>
-                    </div>
-                </div>
-                <a id="btn-mas" class="mx-auto" onclick="clickMas($(this));">
-                    <span></span>
-                    <span></span>
-                </a> 
-            </div>
-        </div>
-    <!--
-                         _      _          
-      ___ ___  _ _ __ __(_) __ (_) ___  ___
-     (_-</ -_)| '_|\ V /| |/ _|| |/ _ \(_-<
-     /__/\___||_|   \_/ |_|\__||_|\___//__/
-    -->
-        <div class="section text-center h-100" id="section-servicios" data-anchor="servicios">
-            <!-- <div id="bg-3" class="bg-gradient"></div> -->
-            <div class="content-section h-100">
-                <div class="slide" data-anchor="creatividad">
-                    <h1 class="titulo">Creatividad</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                        dolore magna aliqua.</p>
-                </div>
-                <div class="slide" data-anchor="planning">
-                    <h1 class="titulo">Planning</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                        dolore magna aliqua.</p>
-                </div>
-                <div class="slide" data-anchor="relaciones">
-                    <h1 class="titulo">Relaciones P&uacute;blicas</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore
-                            et dolore magna aliqua.</p>
-                </div>
-                <div class="slide" data-anchor="geometry">
-                    <h1 class="titulo">Geometry Global</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                        dolore magna aliqua.</p>
-                </div>
-                <div class="slide" data-anchor="digital">
-                    <h1 class="titulo">Digital</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                        dolore magna aliqua.</p>
-                </div>
-            </div>
-        </div>
-    <!--
-      ___ ___  _ __   ___  ___
-     (_-</ _ \| '  \ / _ \(_-<
-     /__/\___/|_|_|_|\___//__/
-    -->
-        <div class="section text-center" id="section-somos" data-anchor="somos">
-            <!-- <div id="bg-4" class="bg-gradient"></div> -->
-            <div class="content-section row h-100">
-                <div class="w-40 text-md-right my-auto">
-                    <h1 class="titulo mb-0 d-inline-flex">Somos</h1>
-                    <span id="s-linea" class="d-none d-md-inline-flex"></span>
-                </div>
-                <div class="w-60 mt-3 mt-md-0 h-100">
-                    <div class="slide">
-                        <div class="pl-somos text-justify">
-                            <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
-                            <h2>
-                                “La agencia más efectiva en Cannes Lions”
-                            </h2>
-                            <p class="mb-0">
-                                La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
-                            </p>
-                            <p>
-                                Dentro de este prestigioso concurso Ogilvy Chile viene ganando hace 14 años consecutivos llevandose además el único Grand
-                                Prix de Chile.
-                            </p>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/jumbo.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/loshidalgos.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/lucciola.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/manitaslimpias.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/milano.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/odmt.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/total.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/we.png" alt="" class="img-fluid">
+                            </div>
                         </div>
-                    </div>
-                    <div class="slide">
-                        <div class="pl-somos text-justify">
-                            <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
-                            <h2>
-                                <i>“La agencia más efectiva en Cannes Lions”</i>
-                            </h2>
-                            <p class="mb-0">
-                                La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
-                            </p>
-                            <p>
-                                Dentro de este prestigioso concurso Ogilvy Chile viene ganando hace 14 años consecutivos llevandose además el único Grand
-                                Prix de Chile.
-                            </p>
+                    </div><!--/container -->
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- LIDERES -->
+    <div class="section text-center h-100" id="section-lideres" data-anchor="lideres">
+        <div class="content-section h-100">
+            <div class="slide" data-anchor="lideres">
+                <h1 class="titulo">Líderes</h1>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
-    <!--
-                    _              _        
-      __  ___  _ _ | |_  __ _  __ | |_  ___ 
-     / _|/ _ \| ' \|  _|/ _` |/ _||  _|/ _ \
-     \__|\___/|_||_|\__|\__,_|\__| \__|\___/
-    -->
-        <div class="section" id="section-contacto" data-anchor="contacto">
-            <div class="content-section h-100 w-100 d-flex">
-                <div id="s-form" class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="alert alert-success position-absolute text-center" role="alert">
-                        <p class="mb-0">Mensaje Enviado</p> 
-                        <hr>
-                        <p class="mb-0">Pronto responderemos su solicitud</p>
+    </div>
+
+    <!-- SERVICIOS -->
+    <div class="section text-center h-100" id="section-servicios" data-anchor="servicios">
+        <div class="content-section h-100">
+            <div class="slide" data-anchor="creatividad">
+                <h1 class="titulo">Creatividad</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
+                    dolore magna aliqua.</p>
+            </div>
+            <div class="slide" data-anchor="planning">
+                <h1 class="titulo">Planning</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
+                    dolore magna aliqua.</p>
+            </div>
+            <div class="slide" data-anchor="relaciones">
+                <h1 class="titulo">Relaciones P&uacute;blicas</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore
+                        et dolore magna aliqua.</p>
+            </div>
+            <div class="slide" data-anchor="geometry">
+                <h1 class="titulo">Geometry Global</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
+                    dolore magna aliqua.</p>
+            </div>
+            <div class="slide" data-anchor="digital">
+                <h1 class="titulo">Digital</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
+                    dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>   
+    
+    
+    <!-- CASOS -->
+    <div class="section text-center h-100" id="section-casos" data-anchor="casos">
+        <h1 class="titulo mb-0 h-auto mt-auto w-100">Casos</h1>
+
+        <div class="content-section h-100">
+            
+            <div class="d-flex">
+                <a class="trabajo" href="#/">
+                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
+                    <div class="detalles">
+                        <p class="t-titulo">
+                            Dulce
+                        </p>
+                        <span class="t-linea"></span>
+                        <p class="t-descripcion">
+                            Algodón
+                        </p>
                     </div>
-                    <h1 class="titulo mb-0 text-center mr-md-auto">Contacto</h1>
-                    <form class="w-100 mt-3 needs-validation" action="" novalidate>
-                        <div class="form-row">
-                            <div class="col-12 col-md-6 mb-2">
-                                <input id="nomApe" class="form-control" type="text" placeholder="Nombre y Apellido" required>
-                                <div class="invalid-feedback">
-                                    ingrese nombre y apellido
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-2">
-                                <input id="correo" class="form-control" type="email" placeholder="Correo Electr&oacute;nico" required>
-                                <div class="invalid-feedback">
-                                    ingrese correo v&aacute;lido
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-2">
-                            <input id="asunto" class="form-control" type="text" placeholder="Asunto" required>
-                            <div class="invalid-feedback">
-                                ingrese asunto
-                            </div>
-                        </div>
-                        <div class="mb-2 mb-md-3">
-                            <textarea id="mensaje" class="form-control" cols="30" rows="5" placeholder="Mensaje" required></textarea>
-                            <div class="invalid-feedback">
-                                ingrese mensaje
-                            </div>
-                        </div>
-                        <a id="btn-enviar" class="btn mb-2 mb-md-3 btn-block" href="#/">ENVIAR</a>
-                    </form>
-                    <div class="w-100">
-                        <p class="info-dir text-justify mb-0">
-                            Nuestras oficinas est&aacute;n ubicadas en:
-                            <a href="https://goo.gl/maps/89a7GaCp9SJ2" target="_blank" >Calle Orinoco 90, Of. 601. Comuna de Las Condes - Santiago de Chile.</a>
-                            Tel&eacute;fono:
-                            <a href="tel:+58227268500">2 272 68 500</a>
+                </a>
+                <a class="trabajo" href="#/">
+                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
+                    <div class="detalles">
+                        <p class="t-titulo">
+                            Unicef
+                        </p>
+                        <span class="t-linea"></span>
+                        <p class="t-descripcion">
+                            Marciano
+                        </p>
+                    </div>
+                </a>
+                <a class="trabajo" href="#/">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
+                    <div class="detalles">
+                        <p class="t-titulo">
+                            Ropa
+                        </p>
+                        <span class="t-linea"></span>
+                        <p class="t-descripcion">
+                            Pantuflé
+                        </p>
+                    </div>
+                </a>
+                <a class="trabajo movil" href="#/">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
+                    <div class="detalles">
+                        <p class="t-titulo">
+                            Dulce
+                        </p>
+                        <span class="t-linea"></span>
+                        <p class="t-descripcion">
+                            Algodón
+                        </p>
+                    </div>
+                </a>
+                <a class="trabajo movil" href="#/">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
+                    <div class="detalles">
+                        <p class="t-titulo">
+                            Dulce
+                        </p>
+                        <span class="t-linea"></span>
+                        <p class="t-descripcion">
+                            Algodón
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            
+        </div>
+    </div>    
+
+    <!-- SOMOS -->
+    <div class="section text-center" id="section-somos" data-anchor="somos">
+
+        <div class="content-section row h-100">
+            <div class="w-40 text-md-right my-auto">
+                <h1 class="titulo mb-0 d-inline-flex">Somos</h1>
+                <span id="s-linea" class="d-none d-md-inline-flex"></span>
+            </div>
+            <div class="w-60 mt-3 mt-md-0 h-100">
+                <div class="slide">
+                    <div class="pl-somos text-justify">
+                        <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
+                        <h2>
+                            “La agencia más efectiva en Cannes Lions”
+                        </h2>
+                        <p class="mb-0">
+                            La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
+                        </p>
+                        <p>
+                            Dentro de este prestigioso concurso Ogilvy Chile viene ganando hace 14 años consecutivos llevandose además el único Grand
+                            Prix de Chile.
                         </p>
                     </div>
                 </div>
-                <iframe id="mapa" class="h-100 w-50 p-0 d-none d-md-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.466385855285!2d-70.58110564949992!3d-33.41108318069095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf219409811b%3A0x80ca14b338a0d198!2sOgilvy+Chile!5e0!3m2!1ses-419!2scl!4v1532557878102"
-                    frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="slide">
+                    <div class="pl-somos text-justify">
+                        <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
+                        <h2>
+                            <i>“La agencia más efectiva en Cannes Lions”</i>
+                        </h2>
+                        <p class="mb-0">
+                            La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
+                        </p>
+                        <p>
+                            Dentro de este prestigioso concurso Ogilvy Chile viene ganando hace 14 años consecutivos llevandose además el único Grand
+                            Prix de Chile.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- CONTACTO -->
+    <div class="section" id="section-contacto" data-anchor="contacto">
+        <div class="content-section h-100 w-100 d-flex">
+            <div id="s-form" class="d-flex flex-column justify-content-center align-items-center">
+                <h1 class="titulo mb-0 text-center mr-md-auto">Contacto</h1>
+
+                <div class="w-100 mt-3 needs-validation">
+                    <?php echo do_shortcode('[contact-form-7 id="5" title="Formulario de contacto"]'); ?>
+                </div>
+                <div class="w-100">
+                    <p class="info-dir text-justify mb-0">
+                        Nuestras oficinas est&aacute;n ubicadas en:<br>
+                        <strong><a href="https://goo.gl/maps/my59bWsUkzFESMww6" target="_blank" >C/ Maguá #3, Urb. Los Ríos, Distrito Nacional, República Dominicana</a></strong> <br><br>
+                        
+                        Teléfono:<br/>
+                        <strong><a href="tel:+8094725050">(809) 472-5050</a></strong>
+                    </p>
+                </div>
+            </div>
+            <iframe id="mapa" class="h-100 w-50 p-0 d-none d-md-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8887537787286!2d-69.96487304908615!3d18.48869758736589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf8a18970bc639%3A0x1813759cd8149048!2sPartners+Ogilvy+%26+Mather!5e0!3m2!1sen!2sdo!4v1559744295612!5m2!1sen!2sdo"
+                frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+</div><!--/content-fullpage -->
+
 
 <?php get_footer(); ?>
