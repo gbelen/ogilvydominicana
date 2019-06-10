@@ -1,12 +1,9 @@
 <?php
 	add_theme_support('post-thumbnails');
     add_image_size('thumb-cuadrada', 400,400, true);
-    // add_image_size('thumb-movil', 450,300, true);
+    add_image_size('thumb-movil', 450,300, true);
+    add_image_size('thumb-related', 300,300, true);
     // add_image_size('thumb-sidebar', 382,225, true);
-    // add_image_size('slide-home', 1900,600, true);
-    // //add_image_size('thumb-slider', 155,95, true);
-    // add_image_size('thumb-dospordos', 200,200, true);
-    // add_image_size('thumb-horizontal', 1400,450, true);
 
 
 	define('THEME_VERSION', '1.0.0.0');

@@ -38,33 +38,6 @@
         </div>
     </div>
 
-    <!-- DETALLE TRABAJO -->
-    <div id="modal" class="h-100 w-100 fade">
-        <a id="btn-close" href="#/">
-            <span></span>
-            <span></span>
-        </a>
-        <div id="section-modal" class="section text-center" data-anchor="detalles-trabajo">
-
-            <?php
-                $query  = array('post_type'=>'page', 'post_parent'=>10, 'post_status'=>'publish');
-                $loop   = new WP_Query($query);
-
-                $n=-1;
-                while ( $loop->have_posts() ) : $loop->the_post();
-                $n++;
-            ?>
-                <div class="trabajo<?php echo $n; ?> d-none">
-                    <div class="container">
-                        <h1><?php the_title(); ?></h1>
-                        <?php the_content(); ?>
-                    </div>
-                </div>
-            <?php endwhile; ?>
-
-        </div>
-    </div><!--/ #modal -->
-
 
     <!-- TRABAJOS -->
     <div class="section" id="section-trabajos" data-anchor="trabajos">
@@ -74,14 +47,17 @@
                 
                 <div class="d-flex">
                     <?php
+                        $query  = array('post_type'=>'page', 'post_parent'=>10, 'post_status'=>'publish');
+                        $loop   = new WP_Query($query);
+
                         $i=-1;
                         while ( $loop->have_posts() ) : $loop->the_post();
                         $i++;
                         
                         echo $i%5 == 0 ? '</div><div class="d-flex">' : '';
                     ?> 
-                        <a class="trabajo" onclick="clickTrabajo('.trabajo<?php echo $i; ?>');" href="#/">
-                            <?php the_post_thumbnail('thumb-cuadrada', array('class'=>'img-fluid', 'alt'=>get_the_title(), 'title'=>get_the_title() )); ?>
+                        <a class="trabajo" href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('thumb-related', array('class'=>'img-fluid', 'alt'=>get_the_title(), 'title'=>get_the_title() )); ?>
                             <div class="detalles">
                                 <p class="t-titulo">
                                     <?php the_title(); ?>
@@ -106,7 +82,8 @@
             <div class="slide">
 
                 <div data-anchor="clientes">
-                    <h1 class="titulo">Clientes</h1>
+                    <h1 class="titulo">We Make Brands Matter</h1>
+                    <p>Orgullosos de trabajar de la mano día a día con estos clientes.</p><br>
 
                     <div class="container">
                         <div class="row">
@@ -114,19 +91,16 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/amex.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/bancamerica.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-4 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/banfondesa.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-4 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/bebemundo.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/casacuesta.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/total.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/casafacci.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imca.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/catrentalstore.png" alt="" class="img-fluid">
@@ -141,19 +115,19 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/cocacola.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/corona.png" alt="" class="img-fluid">
-                            </div>
-                            <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/dino.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/guarina.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/corona.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imaref.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imca.png" alt="" class="img-fluid">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/bancamerica.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imcacat.png" alt="" class="img-fluid">
@@ -168,6 +142,9 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/loshidalgos.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/banfondesa.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/lucciola.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
@@ -179,8 +156,9 @@
                             <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/odmt.png" alt="" class="img-fluid">
                             </div>
+                            
                             <div class="col-4 col-sm-2">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/total.png" alt="" class="img-fluid">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/bebemundo.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/we.png" alt="" class="img-fluid">
@@ -222,35 +200,7 @@
     </div>
 
     <!-- SERVICIOS -->
-    <div class="section text-center h-100" id="section-servicios" data-anchor="servicios">
-        <div class="content-section h-100">
-            <div class="slide" data-anchor="creatividad">
-                <h1 class="titulo">Creatividad</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                    dolore magna aliqua.</p>
-            </div>
-            <div class="slide" data-anchor="planning">
-                <h1 class="titulo">Planning</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                    dolore magna aliqua.</p>
-            </div>
-            <div class="slide" data-anchor="relaciones">
-                <h1 class="titulo">Relaciones P&uacute;blicas</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore
-                        et dolore magna aliqua.</p>
-            </div>
-            <div class="slide" data-anchor="geometry">
-                <h1 class="titulo">Geometry Global</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                    dolore magna aliqua.</p>
-            </div>
-            <div class="slide" data-anchor="digital">
-                <h1 class="titulo">Digital</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut incididunt labore et
-                    dolore magna aliqua.</p>
-            </div>
-        </div>
-    </div>   
+
     
     
     <!-- CASOS -->
@@ -260,66 +210,29 @@
         <div class="content-section h-100">
             
             <div class="d-flex">
-                <a class="trabajo" href="#/">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-1.png" alt="Trabajo">
-                    <div class="detalles">
-                        <p class="t-titulo">
-                            Dulce
-                        </p>
-                        <span class="t-linea"></span>
-                        <p class="t-descripcion">
-                            Algodón
-                        </p>
-                    </div>
-                </a>
-                <a class="trabajo" href="#/">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-2.png" alt="Trabajo">
-                    <div class="detalles">
-                        <p class="t-titulo">
-                            Unicef
-                        </p>
-                        <span class="t-linea"></span>
-                        <p class="t-descripcion">
-                            Marciano
-                        </p>
-                    </div>
-                </a>
-                <a class="trabajo" href="#/">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-3.png" alt="Trabajo">
-                    <div class="detalles">
-                        <p class="t-titulo">
-                            Ropa
-                        </p>
-                        <span class="t-linea"></span>
-                        <p class="t-descripcion">
-                            Pantuflé
-                        </p>
-                    </div>
-                </a>
-                <a class="trabajo movil" href="#/">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-4.png" alt="Trabajo">
-                    <div class="detalles">
-                        <p class="t-titulo">
-                            Dulce
-                        </p>
-                        <span class="t-linea"></span>
-                        <p class="t-descripcion">
-                            Algodón
-                        </p>
-                    </div>
-                </a>
-                <a class="trabajo movil" href="#/">
-                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/trabajos/trabajo-5.png" alt="Trabajo">
-                    <div class="detalles">
-                        <p class="t-titulo">
-                            Dulce
-                        </p>
-                        <span class="t-linea"></span>
-                        <p class="t-descripcion">
-                            Algodón
-                        </p>
-                    </div>
-                </a>
+                <?php
+                    $query  = array('post_type'=>'page', 'post_parent'=>105, 'post_status'=>'publish');
+                    $loop   = new WP_Query($query);
+
+                    $i=-1;
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    $i++;
+                    
+                    echo $i%5 == 0 ? '</div><div class="d-flex">' : '';
+                ?> 
+                    <a class="trabajo" href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail('thumb-related', array('class'=>'img-fluid', 'alt'=>get_the_title(), 'title'=>get_the_title() )); ?>
+                        <div class="detalles">
+                            <p class="t-titulo">
+                                <?php the_title(); ?>
+                            </p>
+                            <span class="t-linea"></span>
+                            <p class="t-descripcion">
+                                <?php the_excerpt(); ?>
+                            </p>
+                        </div>
+                    </a>
+                <?php endwhile; wp_reset_postdata(); //endwhile ?>
             </div>
             
             
@@ -337,32 +250,27 @@
             <div class="w-60 mt-3 mt-md-0 h-100">
                 <div class="slide">
                     <div class="pl-somos text-justify">
-                        <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
-                        <h2>
-                            “La agencia más efectiva en Cannes Lions”
-                        </h2>
-                        <p class="mb-0">
+                        <!-- <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions"> -->
+                        <h2>Internacionalmente reconocida</h2>
+                        <!-- <p class="mb-0">
                             La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
-                        </p>
-                        <p>
-                            Dentro de este prestigioso concurso Ogilvy Chile viene ganando hace 14 años consecutivos llevandose además el único Grand
-                            Prix de Chile.
-                        </p>
+                        </p> -->
+                        <p>Premio de cannes / premio effies latam / premio ojo iberoamerica / sello lurzers Archive</p>
                     </div>
                 </div>
                 <div class="slide">
                     <div class="pl-somos text-justify">
                         <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
                         <h2>
-                            <i>“La agencia más efectiva en Cannes Lions”</i>
+                            <i>Agencia más efectiva de República Dominicana</i>
                         </h2>
-                        <p class="mb-0">
+                        <!-- <p class="mb-0">
                             La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
                         </p>
                         <p>
                             Dentro de este prestigioso concurso Ogilvy Chile viene ganando hace 14 años consecutivos llevandose además el único Grand
                             Prix de Chile.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -386,6 +294,12 @@
                         Teléfono:<br/>
                         <strong><a href="tel:+8094725050">(809) 472-5050</a></strong>
                     </p>
+
+                    <ul class="pull-right redes">
+                        <li class="fb"><a href="https://www.facebook.com/OgilvyDominicana" target="_blank"></a></li>
+                        <li class="tw"><a href="https://twitter.com/ogilvyrd" target="_blank"></a></li>
+                        <li class="ig"><a href="https://www.instagram.com/ogilvyrd/" target="_blank"></a></li>
+                    </ul>
                 </div>
             </div>
             <iframe id="mapa" class="h-100 w-50 p-0 d-none d-md-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8887537787286!2d-69.96487304908615!3d18.48869758736589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf8a18970bc639%3A0x1813759cd8149048!2sPartners+Ogilvy+%26+Mather!5e0!3m2!1sen!2sdo!4v1559744295612!5m2!1sen!2sdo"

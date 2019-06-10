@@ -134,7 +134,7 @@ body {
     width: 100%;
     font-size: 100%;
 
-    font-family: oserif_l;
+    font-family: osans_r;
 
     h1,h2,h3{
         font-family: oserif_b;
@@ -197,34 +197,57 @@ textarea {
  |  _|/ _ \| ' \ / _` |/ _ \
  |_|  \___/|_||_|\__,_|\___/
 */
-.bg-0 {
+#section-inicio{
     background: $pink !important;
 }
 
-.bg-2 {
-    background: #fff;
+#section-trabajos{
+    background: #ecb5bb;
 }
 
-.bg-3 {
-    background: #f4bbc6;
-}
-
-.bg-4 {
-    background: #252d8d;
-}
-
-.bg-5 {
+#section-clientes{
     background: #d6d878;
 }
 
-.bg-6 {
+#section-lideres{
+    background: #252d8d;
+}
+
+#section-servicios{
     background: #f4bbc6;
 }
 
-.bg-7 {
-    background: #ecb5bb;
-    //'9d9e9c','283572','ecb5bb','d2d478'
+#section-casos{
+    background: #d6d878;
 }
+
+#section-somos{
+    background: #252d8d;
+}
+
+#section-contacto{
+    background: #ecb5bb;
+}
+
+//'9d9e9c','283572','ecb5bb','d2d478'
+
+
+
+#section-clientes{
+
+
+    .container{
+        max-width: 950px !important; 
+
+        .img-fluid{
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+    }
+}
+
+
+
 
 .bg-gradient-0 {
     background: $pink;
@@ -239,6 +262,7 @@ textarea {
     /* IE6-9 */
 }
 
+.bg-gradient-6,
 .bg-gradient-2 {
     background: -moz-linear-gradient(top, #fff 0%, #f4bbc6 100%);
     /* FF3.6-15 */
@@ -250,6 +274,7 @@ textarea {
     /* IE6-9 */
 }
 
+.bg-gradient-5,
 .bg-gradient-3 {
     background: -moz-linear-gradient(top, #f4bbc6 0%, #252d8d 100%);
     /* FF3.6-15 */
@@ -296,12 +321,126 @@ textarea {
     box-shadow: 0px 0px 50px 25px #252d8d;
 }
 
-/*
-  ___      _                   _
- | __| ___| |_  __ _  _ _   __| | __ _  _ _  ___  ___
- | _| (_-<|  _|/ _` || ' \ / _` |/ _` || '_|/ -_)(_-<
- |___|/__/ \__|\__,_||_||_|\__,_|\__,_||_|  \___|/__/
-*/
+
+
+
+.wrapDetalleTrabajo{
+    text-align: center;
+    padding-top: 60px;
+    color: #999;
+
+    .container{
+        max-width: 900px !important;
+    }
+
+
+    .trabajo{
+        height: auto !important;
+
+        .detalles {
+            height: auto !important;
+            width: 100%;
+            padding-top: 40%;
+        }   
+    } 
+
+    .wrapRelated{
+        margin-top: 70px;
+        color: #999;
+        text-align: left;
+
+        h3{
+            font-family: osans_l;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .detalles{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            display: none;
+            opacity: 0;
+
+            @include Transition(0.5s ease all);
+
+            .info{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                margin-top: -40px;
+                text-align: center !important;
+            }
+
+        }
+
+        .item_related:hover > .detalles{
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.logoDetalle{
+    max-width: 140px;
+    margin-top: 20px;
+}
+
+
+
+
+
+.redes {
+    padding-top: 5% !important;
+    padding-left: 0 !important;
+    @include Transition(0.5s ease);
+  }
+  .redes li {
+    list-style: none;
+    float: left !important;
+    margin-right: 5px;
+    padding: 0 !important;
+  }
+  .redes li a {
+    background: url(../img/redes.png) no-repeat;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 14px;
+    
+    @include Transition(0.5s ease);
+  }
+
+  .redes li.fb a {
+    background-position: 2px 2px;
+  }
+  .redes li.tw a {
+    background-position: -62px 2px;
+  }
+  .redes li.ig a {
+    background-position: -30px 2px;
+  }
+  .redes li.fb a:hover {
+    background-position: 2px -29px;
+  }
+  .redes li.tw a:hover {
+    background-position: -62px -29px;
+  }
+  .redes li.ig a:hover {
+    background-position: -30px -29px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 /*
            _
   __  ___ | | ___  _ _  ___  ___
@@ -387,7 +526,7 @@ textarea {
 */
 .titulo {
     font-family: oserif_r;
-    font-size: 6rem
+    font-size: 3rem
 }
 
 #sidenav-menu a {
@@ -403,7 +542,7 @@ textarea {
 
 .t-titulo {
     font-family: oserif_r;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-top: auto;
     margin-bottom: 0
 }
@@ -556,13 +695,16 @@ div[class^="fp-controlArrow fp-"] {
     right: 0;
     left: 0;
     z-index: 10201;
-    padding: 3% 3% 0
+    padding: 20px;
 }
 
 .navbar-brand {
-    width: 97px;
-    height: 38px;
-    background-image: url(../img/ogilvy.png);
+    width: 130px;
+    height: 50px;
+    background-image: url(../img/ogilvy-logo.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+
     -webkit-transition: .25s;
     -moz-transition: .25s;
     -o-transition: .25s;
@@ -584,7 +726,7 @@ div[class^="fp-controlArrow fp-"] {
 }
 
 .navbar-toggler span {
-    margin-top: 3%;
+    margin-top: 20px;
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -o-transform: rotate(0);
@@ -652,7 +794,7 @@ div[class^="fp-controlArrow fp-"] {
     right: -100%;
     z-index: 1000;
     height: 100%;
-    width: 220px;
+    width: 300px;
     -webkit-transition: .5s;
     -moz-transition: .5s;
     -o-transition: .5s;
@@ -664,13 +806,13 @@ div[class^="fp-controlArrow fp-"] {
 }
 
 #sidenav-menu ul {
-    padding: 70% 3rem 0
+    padding: 20% 3rem 0
 }
 
 #sidenav-menu li {
     border-radius: 0;
     border: 0;
-    padding: .7rem 1rem
+    padding: .7rem 0rem
 }
 
 #info-menu p {
@@ -900,7 +1042,7 @@ div[class^="fp-controlArrow fp-"] {
                             |__/
 */
 #container-trabajos:hover .trabajo {
-    opacity: .5;
+    // opacity: .5;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%)
 }
@@ -910,11 +1052,13 @@ div[class^="fp-controlArrow fp-"] {
     width: auto;
     height: auto;
     overflow: hidden;
+
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
+
     -moz-perspective: 600px;
     -ms-perspective: 600px;
     -o-perspective: 600px;
@@ -930,10 +1074,11 @@ div[class^="fp-controlArrow fp-"] {
     display: block;
     height: 100%;
     width: 100%;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
+
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+    transition: 1.5s;
 }
 
 .trabajo .detalles {
@@ -945,12 +1090,13 @@ div[class^="fp-controlArrow fp-"] {
     left: 0;
     right: 0;
     bottom: 0;
-    transform: rotateY(180deg);
+
+    // transform: rotateY(180deg);
     opacity: 0;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+    transition: 1.5s;
 }
 
 .t-linea {
@@ -971,13 +1117,13 @@ div[class^="fp-controlArrow fp-"] {
 .trabajo:hover img {
     z-index: 0;
     opacity: 0;
-    transform: rotateY(-180deg);
+    // transform: rotateY(-180deg);
 }
 
 .trabajo:hover .detalles {
     z-index: 1;
     opacity: 1;
-    transform: rotateY(0);
+    // transform: rotateY(0);
 }
 
 #btn-mas {

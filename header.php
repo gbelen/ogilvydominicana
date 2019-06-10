@@ -29,7 +29,7 @@
 <body class="bg-0">
 
     <nav class="navbar">
-        <a id="logo-header1" class="navbar-brand hidden" href="."></a>
+        <a id="logo-header1" class="navbar-brand hidden" href="<?php bloginfo('url'); ?>"></a>
         
         <div class="navbar-toggler ml-auto border-0 d-flex justify-content-center" data-toggle="collapse" data-target="" aria-controls=""
             aria-expanded="false" aria-label="menu">
@@ -68,16 +68,19 @@
             </li>
             <div id="info-menu" class="mt-3">
                 <p class="py-4 mb-0">
-                    Orinoco 90 - Of. 601.
-                    <br>Las Condes.
-                    <br>Santiago de Chile.
-                    <br><a href="tel:+58227268500">2 272 68 500</a>
+                    C/ Maguá #3, Urb. Los Ríos,<br/>
+                    Distrito Nacional, <br/>
+                    República Dominicana <br><br>
+                    
+                    Teléfono:<br/>
+                    <strong><a href="tel:+8094725050">(809) 472-5050</a></strong>
                 </p>
             </div>
-            <div id="redes" class="d-flex justify-content-center">
-                <a id="facebook" href="https://www.facebook.com/ogilvy" target="_blank"></a>
-                <a id="instagram" class="mx-3 mx-md-2" href="http://www.instagram.com/ogilvymather" target="_blank"></a>
-                <a id="vimeo" href="https://vimeo.com/ogilvydigital" target="_blank"></a>
-            </div>
+            
+            <ul class="pull-right redes">
+                <li class="fb"><a href="https://www.facebook.com/OgilvyDominicana" target="_blank"></a></li>
+                <li class="tw"><a href="https://twitter.com/ogilvyrd" target="_blank"></a></li>
+                <li class="ig"><a href="https://www.instagram.com/ogilvyrd/" target="_blank"></a></li>
+            </ul>
         </ul>
     </div>
