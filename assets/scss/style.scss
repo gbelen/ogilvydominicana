@@ -134,10 +134,10 @@ body {
     width: 100%;
     font-size: 100%;
 
-    font-family: osans_r;
+    font-family: oserif_l;
 
     h1,h2,h3{
-        font-family: oserif_b;
+        font-family: oserif_l;
     }
 }
 
@@ -287,6 +287,8 @@ textarea {
 }
 
 
+
+
 .bg-gradient-0 {
     background: $pink;
     /* Old browsers */
@@ -361,6 +363,66 @@ textarea {
 
 
 
+.wrapCasosWinners{
+    padding-top: 0px;
+    margin-bottom: 100px;
+
+    .listCasos{
+        margin-top: 5px;
+
+        .itemCaso{
+            text-align: center;
+        }
+
+        .detalles{
+            background:rgba(232, 65, 72, 0.4);
+            // background:rgba(0, 0, 0, 0.4);
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+
+            @include Transition(0.5s ease all);
+
+            .info{
+                position: absolute;
+                top: 50%;
+                margin-top: -30px;
+                width: 100%;
+                text-align: center;
+                color: #fff;
+
+                h1{
+                    @include TextShadow(1px 1px 1px #000);
+                }
+            }
+        }
+
+        .detalles:hover{
+            background: none;
+            opacity: 0;
+        }
+    }
+
+    .container-fluid{
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    
+}
+
+.wrapHeaderCasoDetalle{
+    background: $pink;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    // border-top: 1px solid $pink;
+    // border-bottom: 1px solid $pink;
+}
 
 .wrapDetalleTrabajo{
     text-align: center;
@@ -371,6 +433,36 @@ textarea {
         max-width: 900px !important;
     }
 
+    .wrapIdea{
+        padding: 30px;
+        padding-bottom: 15px;
+        background: #eee;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        h3{
+            margin-top: 40px;
+        }
+    }
+
+    .wrapResultados{
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+
+    .wrapShareBlock{
+        text-align: center;
+        border-top: 2px solid $pink;
+        padding: 20px;
+
+
+        .shareBloque{
+            max-width: 190px;
+            margin: 0 auto;
+        }
+    }
 
     .trabajo{
         height: auto !important;

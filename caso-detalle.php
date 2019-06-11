@@ -21,42 +21,22 @@
 ?>
 
 <section class="wrapDetalleTrabajo">
-    <div class="container">
-
+    <div class="wrapHeaderCasoDetalle">
         <h1><?php the_title(); ?></h1>
+    </div>
+
+    <div class="container-fluid">
         <?php the_content(); ?>
 
         
-        <div class="wrapRelated">
-            <h3>Otros casos</h3>
-            <hr>
-            
-            <div class="row list_relateds">
-                <?php
-                    $query  = array('post_type'=>'page', 'post_parent'=>105, 'post_status'=>'publish', 'posts_per_page'=>3, 'post__not_in'=>array($post->ID) );
-                    $loop   = new WP_Query($query);
 
-                    while ( $loop->have_posts() ) : $loop->the_post();
-                ?> 
-                    <div class="col-4">
-                        <a class="item_related" href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('thumb-related', array('class'=>'img-fluid', 'alt'=>get_the_title(), 'title'=>get_the_title() )); ?>
-                            <div class="detalles">
-                                <div class="info">
-                                    <p class="t-titulo">
-                                        <?php the_title(); ?>
-                                    </p>
-                                    <span class="t-linea"></span>
-                                    <?php the_excerpt(); ?>
-                                </div>
-                            </div>
-                        </a>
-                    </div>  
-                <?php endwhile; wp_reset_postada(); ?>
+
+        <div class="wrapShareBlock">
+            <div class="shareBloque">
+                <p><strong>COMPARTE</strong></p>
+                <?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?>
             </div>
         </div>
-
-
 
     </div><!--/container -->
 </section><!--/wrapDetalleTrabajo -->

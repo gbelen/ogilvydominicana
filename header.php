@@ -40,9 +40,9 @@
         </div>
         
         <?php if( !is_home() ){ ?>
-        <a href="<?php bloginfo('url'); ?>" style="font-size: 3rem; color: #e84148;">
-            &larr;
-        </a>
+            <a href="#" onclick="javascript: history.back(-1)" style="font-size: 3rem; color: #e84148;">
+                &larr;
+            </a>
         <?php } ?>
     </nav>
 

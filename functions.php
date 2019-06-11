@@ -3,7 +3,7 @@
     add_image_size('thumb-cuadrada', 400,400, true);
     add_image_size('thumb-movil', 450,300, true);
     add_image_size('thumb-related', 300,300, true);
-    // add_image_size('thumb-sidebar', 382,225, true);
+    add_image_size('thumb-casos', 700,485, true);
 
 
 	define('THEME_VERSION', '1.0.0.0');
