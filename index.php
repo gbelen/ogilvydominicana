@@ -100,6 +100,51 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/casafacci.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/alpha.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/apap.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/blanquita.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/bon.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/clubmax.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/countryclub.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/dasani.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/hatuey.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/laritox.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/mamey.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/max-queso.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/pfizer.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/progreso.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/ref_bancosangre.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/sdm.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-sm-2">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/clientes/imca.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-4 col-sm-2">
@@ -179,18 +224,79 @@
                 <h1 class="titulo">Líderes</h1>
                 
                 <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-sm-3">
-                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-4 itemLider col-sm-2 offset-1">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/nonora.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Nonora<br> Elmudesi</h1>
+                                <p>CEO</p>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-3">
-                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/carlos.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Carlos <br/>Martínez</h1>
+                                <p>Strategy VP</p>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-3">
-                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/freddy.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Freddy <br>Jana</h1>
+                                <p>Creative VP</p>
+                            </div>
                         </div>
-                        <div class="col-6 col-sm-3">
-                            <img src="http://placehold.it/400x600" alt="" class="img-fluid">
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/tansi.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Tansi <br>Santos</h1>
+                                <p>Planning VP</p>
+                            </div>
+                        </div>
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/igor.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Igor <br>Kuchar</h1>
+                                <p>CCO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row no-gutters d-none">
+                        <div class="col-4 itemLider col-sm-2 offset-1">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/che.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Ché <br>Muñóz</h1>
+                                <p>Executive Creative Director</p>
+                            </div>
+                        </div>
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/liusik.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Liusik <br>Cuello</h1>
+                                <p>CFO</p>
+                            </div>
+                        </div>
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/larissa.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Larissa <br>Segura</h1>
+                                <p>Head of Talent</p>
+                            </div>
+                        </div>
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/viviana.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Viviana <br>Cruz</h1>
+                                <p>Production Director</p>
+                            </div>
+                        </div>
+                        <div class="col-4 itemLider col-sm-2">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lideres/kelvin.png" alt="" class="img-fluid">
+                            <div class="liderInfo animated fadeIn">
+                                <h1>Kelvin <br>Acosta</h1>
+                                <p>IT Director</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -200,82 +306,20 @@
     </div>
 
     <!-- SERVICIOS -->
-
-    
-    
-    <!-- CASOS -->
-    <div class="section text-center h-100" id="section-casos" data-anchor="casos">
-        <h1 class="titulo mb-0 h-auto mt-auto w-100">Casos</h1>
-
+    <div class="section text-center h-100" id="section-servicios" data-anchor="servicios">
         <div class="content-section h-100">
-            
-            <div class="d-flex">
-                <?php
-                    $query  = array('post_type'=>'page', 'post_parent'=>105, 'post_status'=>'publish');
-                    $loop   = new WP_Query($query);
-
-                    $i=-1;
-                    while ( $loop->have_posts() ) : $loop->the_post();
-                    $i++;
-                    
-                    echo $i%5 == 0 ? '</div><div class="d-flex">' : '';
-                ?> 
-                    <a class="trabajo" href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('thumb-related', array('class'=>'img-fluid', 'alt'=>get_the_title(), 'title'=>get_the_title() )); ?>
-                        <div class="detalles">
-                            <p class="t-titulo">
-                                <?php the_title(); ?>
-                            </p>
-                            <span class="t-linea"></span>
-                            <p class="t-descripcion">
-                                <?php the_excerpt(); ?>
-                            </p>
-                        </div>
-                    </a>
-                <?php endwhile; wp_reset_postdata(); //endwhile ?>
+            <div class="slide" data-anchor="creatividad">
+                <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
+                <h3>Internacionalmente reconocida</h3>
+                <p>Premio de Cannes &bull; Premio Effies Latam &bull; Premio Ojo Iberamérica &bull; Sello Lurzers Archive </p>
             </div>
-            
-            
-        </div>
-    </div>    
-
-    <!-- SOMOS -->
-    <div class="section text-center" id="section-somos" data-anchor="somos">
-
-        <div class="content-section row h-100">
-            <div class="w-40 text-md-right my-auto">
-                <h1 class="titulo mb-0 d-inline-flex">Somos</h1>
-                <span id="s-linea" class="d-none d-md-inline-flex"></span>
-            </div>
-            <div class="w-60 mt-3 mt-md-0 h-100">
-                <div class="slide">
-                    <div class="pl-somos text-justify">
-                        <!-- <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions"> -->
-                        <h2>Internacionalmente reconocida</h2>
-                        <!-- <p class="mb-0">
-                            La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
-                        </p> -->
-                        <p>Premio de cannes / premio effies latam / premio ojo iberoamerica / sello lurzers Archive</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="pl-somos text-justify">
-                        <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/cannes-lions.png" alt="Cannes Lions">
-                        <h2>
-                            <i>Agencia más efectiva de República Dominicana</i>
-                        </h2>
-                        <!-- <p class="mb-0">
-                            La red ha sido galardonada por 5º año consecutivo como la agencia más creativa del mundo en el Festival de Cannes.
-                        </p>
-                        <p>
-                            Dentro de este prestigioso concurso Ogilvy Chile viene ganando hace 14 años consecutivos llevandose además el único Grand
-                            Prix de Chile.
-                        </p> -->
-                    </div>
-                </div>
+            <div class="slide" data-anchor="planning">
+                <img class="img-fluid mx-auto d-flex" src="<?php echo get_template_directory_uri(); ?>/assets/img/effie.png" alt="Effie República Dominicana" width="250">
+                <h3>Agencia más efectiva de República Dominicana</h3>
             </div>
         </div>
-    </div>
+    </div>   
+    
 
     <!-- CONTACTO -->
     <div class="section" id="section-contacto" data-anchor="contacto">
@@ -309,5 +353,8 @@
     
 </div><!--/content-fullpage -->
 
+<a href="<?php echo bloginfo('url'); ?>/casos-ganadores-effie-republica-dominicana" class="viewEffieWinnerBTN">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/view-effie-winner.png" alt="" class="img-fluid">
+</a>
 
 <?php get_footer(); ?>

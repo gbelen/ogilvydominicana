@@ -13,7 +13,7 @@
 </style>
 <?php 
     /*
-        Template name: Trabajo detalle
+        Template name: Casos Ganadores
     */
     get_header(); 
 
@@ -28,12 +28,12 @@
 
         
         <div class="wrapRelated">
-            <h3>Otros trabajos</h3>
+            <h3>Otros casos</h3>
             <hr>
             
             <div class="row list_relateds">
                 <?php
-                    $query  = array('post_type'=>'page', 'post_parent'=>10, 'post_status'=>'publish', 'posts_per_page'=>3, 'post__not_in'=>array($post->ID) );
+                    $query  = array('post_type'=>'page', 'post_parent'=>105, 'post_status'=>'publish', 'posts_per_page'=>3, 'post__not_in'=>array($post->ID) );
                     $loop   = new WP_Query($query);
 
                     while ( $loop->have_posts() ) : $loop->the_post();

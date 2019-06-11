@@ -82,7 +82,7 @@
             function my_register_style(){
                 wp_register_style('generalStyles', get_stylesheet_uri(), null, THEME_VERSION, 'all');
                 wp_register_style('fp', '//cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.min.css', null, THEME_VERSION, 'all');
-                // wp_register_style('animate', get_template_directory_uri().'/assets/css/animate.css', array('generalStyles'), THEME_VERSION, 'all');
+                wp_register_style('animate', get_template_directory_uri().'/assets/css/animate.css', array('generalStyles'), THEME_VERSION, 'all');
     
                 // wp_register_style('fa', get_template_directory_uri().'/assets/css/font-awesome.min.css', array('generalStyles'), THEME_VERSION, 'all');
                 // wp_register_style('timelin', get_template_directory_uri().'/assets/css/timeline.css', array('generalStyles'), THEME_VERSION, 'all');
@@ -109,7 +109,7 @@
             function enqueueing_styles(){
                 // wp_enqueue_style( 'timelin' );
                 // wp_enqueue_style( 'fa' );
-                // wp_enqueue_style( 'animate' );
+                wp_enqueue_style( 'animate' );
                 // wp_enqueue_style( 'owlcss' );
                 // wp_enqueue_style( 'owlthe' );
                 wp_enqueue_style( 'fp' );

@@ -211,6 +211,39 @@ textarea {
 
 #section-lideres{
     background: #252d8d;
+
+    .liderInfo{
+        background: $pink;
+        text-align: left;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        color: #fff;
+        padding-top: 40px;
+        height: 100%;
+        width: 100%;
+        display: none;
+
+        h1{
+            font-size: 2rem;
+            font-family: oserif_l;
+        }
+    }
+
+    .itemLider{
+        cursor: pointer;
+
+
+        .img-fluid{
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }        
+    }
+
+    .itemLider:hover > .liderInfo{
+        display: block;
+    }
+
 }
 
 #section-servicios{
@@ -247,6 +280,11 @@ textarea {
 }
 
 
+.viewEffieWinnerBTN{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
 
 
 .bg-gradient-0 {
